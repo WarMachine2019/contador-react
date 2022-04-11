@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags PWA -->
+    <meta name=" theme-color" content="#333333">
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="black-translucent">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable-status-bar-style" content="true">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./favicon.png" type="image/x-icon">
+    <link rel="apple-touch-startup-image" href="./favicon.png" type="image/x-icon">
+
+    <!-- manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Title -->
+    <title>React CDN</title>
+
+    <!--  Scripts -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="root">
+    </div>
+
+    <!-- <script>
+        ReactDOM.render(React.createElement("h1", null, "Hola Mundo"),
+            document.getElementById("root")
+        );
+
+    </script> -->
+
+    <!-- <script type="text/babel">
+
+        /* class Saludo extends React.Component {
+            render() {
+                return (
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>);
+            }
+        } */
+
+        /* const Saludo = () => {
+            return (
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>)
+        } */
+
+        const Interpolar = () => {
+            /* const nombre = prompt("Cual es tu nombre?")
+            console.log(nombre)*/
+            const [numero, setNumero] = React.useState(0)
+
+            setInterval(() => {
+                setNumero(numero + 1);
+                console.log(num)
+            }, 2000)
+
+            return (
+                <div>
+                    <h1>Fecha {numero}</h1>
+                    <hr />
+
+                </div>);
+        }
+
+        ReactDOM.render(<Interpolar />, document.getElementById("root")
+        )
+
+        /* ReactDOM.render(
+            React.createElement(
+                "ol",
+                null,
+                React.createElement("li", null, "Uva"),
+                React.createElement("li", null, "Piña"),
+                React.createElement("li", null, "Mango")
+            ),
+            document.getElementById("root")
+        ); */
+
+    </script> -->
+
+    <script type="text/babel" src="./components/Contador.js">
+
+    </script>
+
+    <script type="text/babel" src="./index.js"></script>
+
+    <script src="./register.js"></script>
+
+</body>
+
+</html>
