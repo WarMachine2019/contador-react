@@ -6,7 +6,7 @@ const Contador = () => {
   console.log(contador);
   return (
     <div>
-      <h1 className={contador < 0 ? "menor" : "mayor"}>Contador:{contador} </h1>
+      <h3 className={contador < 0 ? "menor" : "mayor"}>Contador:{contador} </h3>
       <hr />
 
       <button onClick={aumentar}>Aumentar</button>
